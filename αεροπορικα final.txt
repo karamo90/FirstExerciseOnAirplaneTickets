@@ -1,0 +1,156 @@
+// ΑΣΚΗΣΗ ΜΕ ΑΕΟΡΟΠΟΡΙΚΑ ΕΙΣΗΤΗΡΙΑ //
+
+console.log("----Καλώς Ήρθατε στην CCCP Airlines όπου σας ταξιδεύουμε σε χώρες της πρώην Σοβιετικής Ένωσης από την Ελλάδα----");
+console.log("----Welcome to CCCP Airlines where you can travel across the former Soviet Union's countries from Greece----");
+console.log("---------------------------------------------------------------------------------------------------------------");
+console.log("-----------------------------ΧΩΡΕΣ ΕΠΙΛΟΓΗΣ-CHOOSE YOUR COUNTRY (22/10-29/10)------------------------------------------------");
+console.log("1:Αρμενία-Armenia");
+console.log("2:Αζερμπαιτζάν-Azerbaijan");
+console.log("3:Λευκορωσία-Belarus");
+console.log("4:Εσθονία-Estonia");
+console.log("5:Γεωργία-Georgia");
+console.log("6:Καζακστάν-Κazakhstan");
+console.log("7:Κιργιστάν-Κirgistan");
+console.log("8:Λετονία-Latvia");
+console.log("9:Λιθουανία-Lithuania");
+console.log("10:Mολδαβία-Moldova");
+console.log("11:Ρωσσία-Russia");
+console.log("12:Tατζικιστάν-Tajikistan");
+console.log("13:Tουρκμενιστάν-Turkmenistan");
+console.log("14:Ουκρανία-Ukraine");
+console.log("15:Oυζμπεκιστάν-Uzbekistan");
+console.log("----------------------------------------------------------------------------------------------------------------");
+console.log("------------------------ΕΠΙΛΕΞΤΕ ΔΡΑΣΤΗΡΙΟΤΗΤΑ-CHOOSE YOUR ACTIVITY-------------------------------------------- ");
+console.log("1:Χαμηλό Κόστος-Low budget");
+console.log("2:Φαγητό-Food");
+console.log("3:Εξερευνηση-Exploration");
+console.log("4:Ποτό-Alcohol");
+console.log("5:Tοπία-Landscapes");
+console.log("6:Tέχνη-Art");
+console.log("7:Θρησκεία-Religion");
+console.log("8:Εξοχή-Countryside");
+console.log("9:Ψώνια-Shopping");
+console.log("10:Ιστορία-History");
+console.log("----------------------------------------------------------------------------------------------------------------");
+console.log("Τα αρχικά διαθέσιμα εισητήρια για κάθε χώρα για την εβδομάδα 22/10-29/10 είναι 100-Τhe initial number of tickets for each country for the period of 22/10 to 29/10 is 100");
+console.log("Όλα τα στοιχεία από τον χρήστη πρέπει να δίνονται σε κεφαλαία λατινικά-Οnly Capital letters data input from user");
+console.log("To πακέτο μας είναι ατομικό-Οur offer is for one person only");
+console.log("-----------------------------------------------------------------------------------------------------------------");
+
+let destination;
+let finalDest;
+let finalActivity;
+let tic = prompt("Δώσε μου το διαθέσιμο αριθμό εισητηρίων-Available tickets are :");
+let tickets = parseInt(tic);
+let input = [];
+
+if (tickets == 0 && typeof (tickets) != Number) {
+    console.log("Δυστηχώς δεν υπάρχουν διαθέσιμα εισητήρια-Not enough tickets available");
+}
+else if (tickets > 0) {
+    destination = prompt("Παρακαλούμε επιλέξτε προορισμό-Please choose your destination ");
+    finalDest = parseInt(destination);
+    activity = prompt("Παρακαλούμε επιλέξτε την δραστηριότητα που σας ενδιαφέρει-Choose your favourite activity");
+    finalActivity = parseInt(activity);
+}
+if (tickets > 0) {
+    function data() {
+        let firstName = prompt("Πρώτο όνομα-First Name");
+        input.push(firstName);
+        let lastName = prompt("Επώνυμο-Last name");
+        input.push(lastName);
+        let gender = prompt("MALE-FEMALE-OTHER");
+        input.push(gender);
+        let mobileNumber = prompt("Αριθμός κινητού τηλέφωνου-Mobile phone Number");
+        input.push(mobileNumber);
+    }
+}
+
+data();
+console.log(input);
+
+switch (finalDest) {
+    case 1:
+        switch (finalActivity) {
+            case 1: case 4: console.log("Προτείνουμε την Αρμενία-We recommend Armenia"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Αρμενία-Choose another country from Armenia"); break;
+        }break;
+    case 2:
+        switch (finalActivity) {
+            case 5: console.log("Προτείνουμε το Αζερμπαιτζάν-We recommend Azerbaijan"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από τo Αζερμπαιτζάν-Choose another country from Azerbaijan"); break;
+        }break;
+    case 3:
+        switch (finalActivity) {
+            case 6: case 8: console.log("Προτείνουμε την Λευκορωσία-We recommend Belarus"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Λευκορωσία-Choose another country from Belarus"); break;
+        }break;
+    case 4:
+        switch (finalActivity) {
+            case 2: case 6: case 10: console.log("Προτείνουμε την Εσθονία-We recommend Estonia"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Εσθονία-Choose another country from Estonia"); break;
+        }break;
+    case 5:
+        switch (finalActivity) {
+            case 1: case 2: case 8: case 9: console.log("Προτείνουμε την Γεωργία-We recommend Georgia"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Γεωργία-Choose another country from Georgia"); break;
+        }break;
+    case 6:
+        switch (finalActivity) {
+            case 5: case 6: console.log("Προτείνουμε το Καζακστάν-We recommend Kazakhstan"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από το Καζακστάν-Choose another country from Kazakhstan"); break;
+        }break;
+    case 7:
+        switch (finalActivity) {
+            case 3: case 8: case 10: console.log("Προτείνουμε το Κιργιστάν-We recommend Kirgistan"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από το Κιργιστάν-Choose another country from Kirgistan"); break;
+        }break;
+    case 8:
+        switch (finalActivity) {
+            case 3: case 10: console.log("Προτείνουμε την Λετονία-We recommend Latvia"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Λετονία-Choose another country from Latvia"); break;
+        }break;
+    case 9:
+        switch (finalActivity) {
+            case 4: case 9: console.log("Προτείνουμε την Λιθουανία-We recommend Lithuania"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Λιθουανία-Choose another country from Lithuania"); break;
+        }break;
+    case 10:
+        switch (finalActivity) {
+            case 6: case 7: console.log("Προτείνουμε την Μολδαβία-We reommend Moldavia"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Μολδαβία-Choose another country from Moldavia"); break;
+        }break;
+    case 11:
+        switch (finalActivity) {
+            case 4: case 5: case 7: case 9: case 10: console.log("Προτείνουμε την Ρωσσία-We recommend Russia"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Ρωσσία-Choose another country from Russia"); break;
+        }break;
+    case 12:
+        switch (finalActivity) {
+            case 8: case 10: console.log("Προτείνουμε το Τατζικιστάν-We recommend Tajikistan"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από το Τατζικιστάν-Choose another country from Tajikistan"); break;
+        }break;
+    case 13:
+        switch (finalActivity) {
+            case 10: console.log("Προτείνουμε το Τουρκμενιστάν-We recommend Turkmenistan"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από το Τουρκμενιστάν-Choose another country from Turkmenistan"); break;
+        }break;
+    case 14:
+        switch (finalActivity) {
+            case 4: case 8: console.log("Προτείνουμε την Ουκρανία-We recommend Ukraine"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από την Ουκρανία-Choose another country from Ukraine"); break;
+        }break;
+    case 15:
+        switch (finalActivity) {
+            case 6: case 7: console.log("Προτείνουμε το Ουζμπεκιστάν-We recommend Uzbekistan"); break;
+            default: console.log("Διαλέξτε άλλη χώρα από το Ουζμπεκιστάν-Choose another country from Uzbekistan"); break;
+        }break;
+
+    default: console.log("ERROR-WRONG INPUT"); break;
+}
+
+console.log("Ελπίζουμε να σας εξυπηρετήσαμε αν όχι περιμέντε το πακέτο εισητηρίων του Νοεμβρίου");
+console.log("We hope to have helped you if not try our new tickets-offer in November");
+
+
+//FOR MOTHER RUSSIA//
